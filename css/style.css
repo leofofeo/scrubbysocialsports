@@ -11,6 +11,7 @@
 /* foundation color: #e67e22 */
 
 
+
 /*--------------------*/
 /* REUSABLE COMPONENTS */
 /*--------------------*/
@@ -70,7 +71,7 @@ h2:after {
 
 
 header {
-    background-image: ;
+    background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0,0,0,.7)), url(img/sss_header.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -78,10 +79,101 @@ header {
 }
 
 
+nav .row {
+    padding-top:50px;
+    width:100%;
+}
 
+div.logo {
+    float:left;
+    margin-left:-5%
+}
 
+div.nav-bar {
+    float:right;
+    margin-right:-10%;
+}
+
+div.nav-bar ul {
+    list-style: none;
+    padding-top:40px;
+}
+
+div.nav-bar li {
+    display: inline;
+    margin-left:20px;
+    color:#fff;
+    font-size:1.2em;
+    font-weight:bold
+}
+
+div.header-info {
+    margin-top: 40px;
+    width: 40%;
+    float:left;
+    margin-left:15%;
+}
+
+div.header-info h1 {
+    color:#fff;
+    font-size:2.4em;
+    font-weight:300;
+}
+
+div.header-info div {
+    margin-top:50px;
+}
 
 /*--------------------*/
 /* BUTTONS */
 /*--------------------*/
 
+.btn {
+    text-decoration: none;
+    width:60px;
+    height:60px;
+    padding:15px;
+    border-radius: 15px;
+}
+
+.btn-register:link,
+.btn-register:active
+{
+    color:#fff;
+    background-color:#e67e22;
+    border:2px solid #e67e22;
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+}
+
+.btn-learn-more:link,
+.btn-learn-more:active
+{
+    color:#e67e22;
+    border: 2px solid #e67e22;
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+}
+
+
+.btn-register:hover,
+.btn-register:visited
+{
+    color:#e67e22;
+    background-color:#fff;
+    border:2px solid #fff;
+}
+
+.btn-learn-more:hover,
+.btn-learn-more:visited {
+    color:#fff;
+    border:2px solid #fff;
+}
+
+/*--------------------*/
+/* IMAGES */
+/*--------------------*/
+
+.logo img {
+    width:100px;
+    height:100px;
+    border-radius:50%
+}
