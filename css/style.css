@@ -43,6 +43,11 @@ h1, h2, h3 {
 }
 
 
+h2 {
+    text-align: center !important;
+    margin: 0 auto;
+}
+
 h2:after {
     display: block;
     height: 2px;
@@ -53,10 +58,24 @@ h2:after {
     margin-top: 30px;
 }
 
+.flex-box {
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
 
 
 
 /*----------Paragraphs ------- */
+
+.long-copy {
+    text-align: center;
+    padding: 0 10%;
+    line-height: 1.4em;
+    word-spacing: .25em;
+    text-align: justify;
+    
+}
 
 
 
@@ -76,6 +95,10 @@ header {
     background-position: center;
     height: 100vh;
     background-attachment:fixed;
+}
+
+section {
+    margin: 100px auto;
 }
 
 
@@ -203,4 +226,50 @@ div.nav-bar li a:visited
     width:100px;
     height:100px;
     border-radius:50%
+}
+
+
+/*--------------------*/
+/* BASIC INFO */
+/*--------------------*/
+
+.section-basic-info {
+    
+}
+
+
+
+/*--------------------*/
+/* LEAGUES */
+/*--------------------*/
+
+.section-leagues {
+    width: 100%;
+    margin:0;
+    padding:0;
+}
+
+
+.img-container {
+    width:100wh;
+    height:200px;
+    margin: 0;
+    overflow:hidden;
+    background-color: black;
+}
+
+.img-container:hover {
+    opacity: .7s
+    transition: opacity .03s;
+}
+
+.img-container img:hover {
+    transform:scale(1);
+    transition: transform 0.3s;
+}
+
+.img-container img {
+    width:100%;
+    height:100%;
+    transform: scale(1.15);
 }
