@@ -31,6 +31,18 @@ html {
     margin: 0 auto;
 }
 
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: '.';
+    clear:both;
+    display:block;
+    height:0;
+    visibility:hidden;
+}
+
 
 /* --------HEADINGS -----------*/
 
@@ -71,10 +83,10 @@ h2:after {
 .long-copy {
     text-align: center;
     padding: 0 10%;
-    line-height: 1.4em;
+    line-height: 1.5em;
     word-spacing: .25em;
-    text-align: justify;
-    
+    text-align: left;
+    padding-top:10px
 }
 
 
@@ -230,7 +242,8 @@ div.nav-bar li a:visited
 /*--------------------*/
 
 .section-basic-info {
-    margin: 50px auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 
@@ -240,35 +253,39 @@ div.nav-bar li a:visited
 /*--------------------*/
 
 .section-leagues {
-    width: 100%;
-    margin:0!important;;
-    padding:0!important;;
+    padding: 0;
 }
 
+.leagues-showcase {
+    list-style:none;
+    width:100%;
+}
 
-
-
-.img-container {
+.leagues-showcase li {
+    display:block;
+    float:left;
     width:25%;
-    height:200px;
-    margin: 0;
+}
+
+.league-photo {
+    width:100%;
+    height:250px;
+    margin:0;
     overflow:hidden;
+    background-color:#000;
 }
 
-.img-container:hover {
-    opacity: .7s
-    transition: opacity .03s;
-}
-
-.img-container img:hover {
-    transform:scale(1);
-    transition: transform 0.3s;
-}
-
-.img-container img {
+.league-photo img {
     width:100%;
     height:100%;
-    transform: scale(1.15);
+    transform:scale(1.15);
+    transition: transform 0.5s;
+    opacity: 0.7;
+}
+
+.league-photo img:hover {
+    transform: scale(1.03);
+    opacity:1;
 }
 
 
@@ -277,15 +294,198 @@ div.nav-bar li a:visited
 /*--------------------*/
 
 
-.section-registering-info {
-    background-color: #efefef;
-    padding: 50px;
+.section-steps {
+    background-color: #f2f2f2;
+    padding-top:80px;
+    padding-bottom:80px;
 }
 
-.step{
-    border: 1px solid #e67e22;
-    padding:10px;
-    height:10px;
-    width:10px;
-    border-radius: 50%;
+
+.large-icon {
+    width:80%;
+    font-size:7em;
+}
+
+
+.steps-box {
+    padding-top: 40px;
+    display:flex;
+    flex-flow:column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.signup-step {
+    display:flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top:40px;
+}
+
+.step-number {
+    color:#e67e22;
+    border: 2px solid #e67e22;
+    border-radius:50%;
+    height:50px;
+    display:block;
+    width:50px;
+    text-align:center;
+    font-size:1.5em;   
+}
+
+.step-description{
+    margin-left:20px;
+}
+
+.signup {
+    margin-top:40px;
+}
+
+.btn-signup {
+    border: 2px solid #e67e22;
+    background-color:#e67e22;
+    color:white;
+    font-weight:bold;
+}
+
+
+/***********************************/
+/**** LOCATIONS ****/
+/**********************************/
+
+.section-locations {
+    margin-top:80px;
+    margin-bottom:80px;
+}
+
+.box img {
+    width:100%;
+    height: 200px;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+
+.city-feature {
+    margin-bottom:5px;
+}
+
+.city-feature a:visited,
+.city-feature a:link {
+    text-decoration: none;
+    color: #e67e22;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+.city-feature a:hover,
+.city-feature a:active {
+    color:#555;
+    border-bottom: 1px solid transparent;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    color: #e67e22;
+    font-size: 120%;
+    
+    margin-right: 20px;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+
+/***********************************/
+/**** NEWSLETTER ****/
+/**********************************/
+
+
+.section-newsletter {
+    background-color: #f2f2f2;
+    padding-top:80px;
+    padding-bottom:80px;
+}
+
+.email-form {
+    text-align: center;
+    padding-top:5%;
+}
+
+.email-form input {
+    width:30%;
+    height:50px;
+    border-radius:20px;
+    text-align: center;
+}
+
+
+/***********************************/
+/**** Testimonials ****/
+/**********************************/
+
+
+.section-testimonials {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+blockquote {
+    padding:2%;
+    font-style:italic;
+    line-height: 1.45em;
+    position: relative;
+     margin-top:40px;
+}
+
+cite {
+    font-size: .9em;
+    display:block;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display:block;
+    position:absolute;
+    top: 0;
+    left:-3px;
+   
+}
+
+
+
+cite img {
+    height: 80px;
+    width: 80px;
+    border-radius: 40%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.testimonials-flex {
+    display:flex;
+    justify-content: space-around;
+    padding-top:60px;
+}
+
+.testimonial-box {
+    display:flex;
+    flex-flow:column;
+    width:50%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.test-quote {
+    width:70%;
+    align-self: flex-start;
+}
+
+.test-cite{
+    align-self: flex-end;
+    margin-right:20%;
 }
