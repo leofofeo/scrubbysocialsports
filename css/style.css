@@ -110,18 +110,20 @@ header {
 }
 
 
+
 nav .row {
     padding-top:50px;
     width:100%;
 }
 
 
-div.nav-bar ul {
+.nav-bar ul {
     list-style: none;
     padding-top:20px;
+    padding-right:20px;
 }
 
-div.nav-bar li {
+.nav-bar li {
     display: inline;
     margin-left:20px;
     color:#fff;
@@ -129,59 +131,40 @@ div.nav-bar li {
     font-weight:bold;
 }
 
-div.header-info {
-    margin-top: 40px;
-    width: 40%;
-    float:left;
-    margin-left:15%;
+
+
+
+.header-info {
+    padding-bottom:20px;
+    margin: 5% auto;
+    padding-left:20px;
+    padding-right:20px;
 }
 
-div.header-info h1 {
+.header-info h1 {
     color:#fff;
     font-size:2.4em;
     font-weight:300;
-}
-
-div.header-info div {
-    margin-top:50px;
+    padding-bottom:40px;
 }
 
 
-div.nav-bar li a {
-    text-decoration: none;
-    color:#fff;
-    transition: color 0.2s;
-}
-
-div.nav-bar li a:hover,
-div.nav-bar li a:visited
+.nav-bar li a:link,
+.nav-bar li a:active
 {
     text-decoration: none;
     color:#e67e22;
+    transition: color 0.2s;
+}
+
+.nav-bar li a:hover,
+.nav-bar li a:visited
+{
+    text-decoration: none;
+    color:#fff;
 }
 
 
-.row-col-row {
-    display:flex;
-    flex-flow:row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left:10px;
-}
-
-.row-col-row-alt {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.row-col-col {    
-    display:flex;
-    flex-flow:column nowrap;
-    align-items: flex-start;
-    padding-left:10px;
-}
 /*--------------------*/
 /* BUTTONS */
 /*--------------------*/
@@ -194,13 +177,13 @@ div.nav-bar li a:visited
     border-radius: 15px;
 }
 
-.btn-register:link,
-.btn-register:active
+.btn-register
 {
     color:#fff;
     background-color:#e67e22;
     border:2px solid #e67e22;
     transition: color 0.3s, background-color 0.3s, border 0.3s;
+   
 }
 
 .btn-learn-more:link,
